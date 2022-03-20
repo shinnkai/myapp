@@ -1,25 +1,33 @@
-# README
+# <介護用品レンタルアプリ>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+<介護用品専用でレンタルのみの運用で、使い方、使った感想など共有できるレビューサイトです。
+ 介護用品で、新品を買うのは金銭面でしんどい人用にレビューを見てレンタルできると便利性が高いと思い、このアプリを作りました。
+ 機能面は、写真付きで使い方や使ってよかった部分、使い勝手が悪かった部分などをレビューとして書いて投稿していただくようになっており、気に入っていただけるとレンタルできる仕組みになっております。また、すでにレンタルされているものをレンタルしたい場合はレンタル中かどうかのステータスで判断していただく形となります。
+ 今後、介護用品が集まっていけば、会員登録していただいた方限定で使い方の動画も載せ、見ることができるようにしたいと考えています。>
 
-Things you may want to cover:
+### サイトテーマ
+<介護用品のレンタルが初心者でも簡単にできるサイト>
 
-* Ruby version
+### テーマを選んだ理由
+<大学時代福祉を専攻しており、介護用品のレンタルがあることは知っていましたが、社会福祉士が介入してレンタルなどがありました。そしてレンタルするにもお金が高く、費用がかかるばかりです。ちょうど最近祖母が介護用品を使うようになり、金額に驚きました。そこで一般向けにレンタルを行えば、安くて済むのではないかと考えてこのテーマにしました。
+ また、少子高齢化が進み自宅での介護が必要になってきます。そんな中で何も知識がない状態でもこのサイトを見ていただくと道具はレンタルできること、使い方がわかり、使用したい人からの需要はあると考え、このテーマにしました。>
 
-* System dependencies
+### ターゲットユーザ
+<介護が必要になった当事者、家族、お世話をする人>
 
-* Configuration
+### 主な利用シーン
+<介護が必要になったとき、便利なものを探しているとき>
 
-* Database creation
+## 設計書
 
-* Database initialization
 
-* How to run the test suite
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/1SL91PbMce829rWw4uXiyidjmHLb4vBhqfEPQModwthg/edit?usp=sharing
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# myapp
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
