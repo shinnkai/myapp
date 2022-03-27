@@ -1,0 +1,51 @@
+<div class = "container">
+   <h5>マイページ</h5>
+  <div class = "row" >
+   <table class="table info">
+
+    <tr>
+      <td>登録情報</td>
+      <td><%= link_to "編集する", edit_customer_path(@customer), class: "btn btn-success" %></td>
+    </tr>
+    <tr>
+      <td>姓</td>
+      <td><%= @customer.family_name %></td>
+    </tr>
+    <tr>
+      <td>名</td>
+      <td><%= @customer.first_name %></td>
+    </tr>
+    <tr>
+      <td>カナ（姓）</td>
+      <td><%= @customer.kana_family_name %></td>
+    </tr>
+    <tr>
+      <td>カナ（名）</td>
+      <td><%= @customer.kana_first_name %></td>
+    </tr>
+    <tr>
+      <td>郵便番号</td>
+      <td><%= @customer.postal_code %></td>
+    </tr>
+    <tr>
+      <td>住所</td>
+      <td><%= @customer.address %></td>
+    </tr>
+    <tr>
+      <td>電話番号</td>
+      <td><%= @customer.tel %></td>
+    </tr>
+    <tr>
+     <td>メールアドレス</td>
+     <td><%= @customer.email %></td>
+    </tr>
+    <tr>
+      <td>配送先</td>
+      <td><%= link_to "一覧を見る" ,  shipping_addresses_path(@customer) %></td>
+      <td>注文履歴</td>
+      <td><%= link_to "注文履歴を見る", orders_path(@customer), class: "btn btn-success" %></td>
+    </tr>
+
+    </table>
+   </div>
+  </div>

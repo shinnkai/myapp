@@ -1,0 +1,28 @@
+<div class="container px-2">
+
+  <div class="row justify-content-center">
+    <div class="col-md-2.5 ribbon2">
+      <h3>商品一覧</h3>
+    </div>
+  </div>
+
+  <div class="col-md-9 offset-md-1">
+    <div class="row item_lists">
+      <% @items.each do |item| %>
+        <div class="col-md-3 item_list">
+          <%= link_to item_path(item) do %>
+            <% if item.image.attached? %>
+             <%= image_tag item.image, size: "100x100" %>
+            <% else %>
+              <%= image_tag 'no_image', size: "100x100" %>
+            <% end %>
+          <% end %>
+          <p><%= link_to item.name, item_path(item) %><br></p>
+          価格¥<%= (item.tax_out_price * 1.1).round.to_i %>
+        </div>
+      <% end %>
+      <%= paginate @items %>
+    </div>
+  </div>
+
+</div>

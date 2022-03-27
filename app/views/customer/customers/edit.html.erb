@@ -1,0 +1,44 @@
+<thead>
+  <div class = "container">
+  <h5>会員情報編集</h5>
+   <div class = "row" >
+    <%= form_with model:@customer, local:true do |f| %>
+
+     <table class="table table-striped">
+       <tr>
+        <td><label class="form-label">氏名</label></td>
+        <td><%= f.text_field :family_name %></td>
+        <td> <%= f.text_field :first_name %></td>
+      </tr>
+      <tr>
+        <td><label class="form-label">フリガナ</label> </td>
+        <td><%= f.text_field :kana_family_name %> </td>
+        <td><%= f.text_field :kana_first_name %> </td>
+      </tr>
+      <tr>
+        <td><label class="form-label">郵便番号</label></td>
+        <td><%= f.text_field :postal_code %></td>
+      </tr>
+      <tr>
+        <td><label class="form-label">住所</label></td>
+        <td><%= f.text_field :address %></td>
+      </tr>
+      <tr>
+        <td><label class="form-label">電話番号</label></td>
+        <td><%= f.text_field :tel %></td>
+      </tr>
+      <tr>
+        <td><label class="form-label">メールアドレス</label></td>
+        <td><%= f.text_field :email %></td>
+  　　</tr>
+  　　  <td>
+  　　   <%= f.submit "変更内容を保存" %>
+        </td>
+        <td>
+         <%= link_to "退会", confirm_delete_customers_path(@customer) %>
+        </td>
+    <% end %>
+   </div>
+</div>
+  </thead>
+</table>
