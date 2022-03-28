@@ -31,3 +31,7 @@ https://docs.google.com/spreadsheets/d/1SL91PbMce829rWw4uXiyidjmHLb4vBhqfEPQModw
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
 - IDE：Cloud9
+
+## しよう素材
+O-DAN
+iStock : https://www.istockphoto.com/jp?esource=SEM_IS_GO_JP_Head_Photo_Material_JA_Broad&kw=JP_Free-Kana_Broad_%2B%E5%86%99%E7%9C%9F+%2B%E3%83%95%E3%83%AA%E3%83%BC+%2B%E7%B4%A0%E6%9D%90_b&kwid=s_43700041390939509_dc&pcrid=431015626708&utm_medium=cpc&utm_source=GOOGLE&utm_campaign=JP_Head_Photo_Material_JA_Broad&utm_term=%2B%E5%86%99%E7%9C%9F+%2B%E3%83%95%E3%83%AA%E3%83%BC+%2B%E7%B4%A0%E6%9D%90&gclid=CjwKCAjwloCSBhAeEiwA3hVo_VcI7A0zBJZ5jGUwhqFCi3cBm--clUz7GWb85XMgOmS2-urHYjaCqhoCGTUQAvD_BwE&gclsrc=aw.ds

@@ -43,9 +43,9 @@ class Customer::CartItemsController < ApplicationController
 
 
 
-def destroy
+  def destroy
 
-   #@cart_item = CartItem.find(params[:id])
+    #@cart_item = CartItem.find(params[:id])
 
     @cart_item = my_cart.find_by(id: params[:id])
 
