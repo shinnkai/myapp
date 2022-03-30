@@ -14,19 +14,17 @@
       <div class= 'col-10'>
       　<h3 class="font-weight-bold">新着商品</h3>
       　<div class ="d-inline-flex">
-          <!--<#% @items.each do |item| %>-->
-          <!--  <div class= "px-3 py-3">-->
-          <!--    <div>-->
-          <!--      <#%= link_to item_path(item) do %>-->
-          <!--        <#%= image_tag item.image, size: "180x150" %>-->
-          <!--      <#% end %>-->
-          <!--    </div>-->
-          <!--    <div class="font-weight-bold my-2"><#%= link_to item.name, item_path(item) %></div>-->
-          <!--    <div class="font-weight-bold my-2">¥<#%= item.tax_out_price.to_s(:delimited) %></div>-->
-          <!--  </div>-->
-          <!--<#% end %>-->
+          <% @items.each do |item| %>
+            <div class= "px-3 py-3">
+              <div>
+                <%= link_to item_path(item) do %>
+                  <%= image_tag item.image, size: "180x150" %>
+                <% end %>
+              </div>
+              <div class="font-weight-bold my-2"><%= link_to item.name, item_path(item) %></div>
+              <div class="font-weight-bold my-2">¥<%= item.tax_out_price.to_s(:delimited) %></div>
+            </div>
+          <% end %>
         </div>
     　</div>
-    　</div>
     </div>
-</div>

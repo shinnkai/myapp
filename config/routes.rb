@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :customer do
+    get 'posts/index'
+    get 'posts/show'
+  end
   root to: 'home#top'
    get '/about' => 'home#about'
 
@@ -42,6 +46,9 @@ Rails.application.routes.draw do
         post :logs
         get :thanx
       end
+    end
+    resources :posts do  #postsコントローラへのルーティング  
+    resources :comments, only: [:create]  #commentsコントローラへのルーティング
     end
 
 

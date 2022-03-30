@@ -8,6 +8,7 @@ class Customer::ItemsController < ApplicationController
     @item = Item.find(params[:id])
     #カートに追加するため
     @cart_items = CartItem.new
+    
   end
 
 

@@ -7,5 +7,7 @@ class Customer < ApplicationRecord
   has_many :cart_items, dependent: :destroy
   has_many :orders, dependent: :destroy
   has_many :shipping_addresses, dependent: :destroy
+  has_many :posts, dependent: :destroy
+  has_many :comments  #User.commentsで、ユーザーの所有するコメントを取得できる。
          
 end

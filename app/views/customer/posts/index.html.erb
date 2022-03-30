@@ -1,0 +1,15 @@
+<h2>投稿する</h2>
+
+<%= form_with model: @post do |f| %>
+   <%= f.text_area :post_content, placeholder: '本文' %>
+   <%= f.submit %>
+<% end %>
+
+
+<h2>投稿一覧</h2>
+
+<% @posts.each do |post| %>
+  <td><%= link_to post.post_content, post %></td>
+<% end %>
+
+<%= link_to '商品一覧', items_path %>
