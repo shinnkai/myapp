@@ -26,7 +26,7 @@ class Customer::PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:post_content)
+    params.require(:post, :item).permit(:post_content, :image)
   end
   
 end

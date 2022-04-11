@@ -1,35 +1,32 @@
 <div class='col-auto'>
-      <table class="table table-borderless">
-        <tbody>
-          <tr>
-            <td>
-              <h1><%= @item.name %></h1>
-              <h1><%= image_tag @item.image, size: "200x150" %></h1>
-            </td>
-          </tr>
-          <tr>
-            <td class="item.intro"><%= @item.explanation %></td>
-          </tr>
-          <tr>
-            <td><strong>¥ <%= @item.tax_out_price.to_s(:delimited) %></strong> (税込)</td>
-          </tr>
-          <tr>
-            <td>
-             
-              <% if current_customer.presence %>
-                 <div class="d-inline-flex">
-                <%= form_with model: @cart_items, url: cart_items_path(current_customer), local: true do |f| %>
-                  <%= f.hidden_field :item_id, value: @item.id %>
-                  <%#= f.hidden_field :customer_id, value: current_customer.id %>
-                  <%= f.select :quantity, *[1..10] %>
-                  <%= f.submit 'カートに入れる', class:'btn btn-success ml-3' %>
-                <% end %>
-              <% end %>
-            </td>
-            <td>
-              <%= link_to 'コメント', posts_path %>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <table class="table table-borderless">
+    <tbody>
+      <tr>
+        <td>
+          <h1><%= @item.name %></h1>
+          <h1><%= image_tag @item.image, size: "200x150" %></h1>
+        </td>
+      </tr>
+      <tr>
+        <td class="item.intro"><%= @item.explanation %></td>
+      </tr>
+      <tr>
+        <td><strong>¥ <%= @item.tax_out_price.to_s(:delimited) %></strong> (税込)</td>
+      </tr>
+      <tr>
+        <td>
+          <% if current_customer.presence %>
+             <div class="d-inline-flex">
+            <%= form_with model: @cart_items, url: cart_items_path(current_customer), local: true do |f| %>
+              <%= f.hidden_field :item_id, value: @item.id %>
+              <%#= f.hidden_field :customer_id, value: current_customer.id %>
+              <%= f.select :quantity, *[1..10] %>
+              <%= f.submit 'カートに入れる', class:'btn btn-success ml-3' %>
+            <% end %>
+          <% end %>
+          <%= link_to 'コメント', posts_path, class: "btn btn-primary center" %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

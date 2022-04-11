@@ -1,15 +1,50 @@
-<h2>投稿する</h2>
+<div class=container>
+  <div class="row">
+    <div class="col-６">
+      <h2 class="p-3"><span class="header">利用した感想</span></h2>
 
-<%= form_with model: @post do |f| %>
-   <%= f.text_area :post_content, placeholder: '本文' %>
-   <%= f.submit %>
-<% end %>
+      <div class="row">
+        <table class="table table-bordered">
+          <thead>
+            <tr class="table">
+              <%= form_with model: @post do |f| %>
+                <%= f.text_area :post_content, placeholder: '感想' %>
+                <%= f.submit '投稿する', class: "btn btn-success" %>
+              <% end %>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class=container>
+  <div class="row">
+    <div class="col-３">
+      <h2 class="p-３"><span class="header">感想一覧</span></h2>
 
-<h2>投稿一覧</h2>
+      <div class="row">
+        <table class="table table-bordered">
+          <thead>
+            <tr class="table">
+              <% @posts.each do |post| %>
+                <td><%= link_to post.post_content, post %></td>
+              <% end %>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% @posts.each do |post| %>
-  <td><%= link_to post.post_content, post %></td>
-<% end %>
-
-<%= link_to '商品一覧', items_path %>
+<div class=container>
+  <div class="row">
+    <div class="col-3">
+      <div class="mt-3 row">
+        <%= link_to '商品一覧', items_path, class: "btn btn-primary center" %>
+      <div>
+    </div>
+  </div>
+</div>
